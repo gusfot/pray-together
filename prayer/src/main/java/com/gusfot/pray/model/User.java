@@ -1,4 +1,4 @@
-package com.gusfot.model;
+package com.gusfot.pray.model;
 
 import java.sql.Date;
 

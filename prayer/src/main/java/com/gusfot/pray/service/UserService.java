@@ -1,8 +1,8 @@
-package com.gusfot.service;
+package com.gusfot.pray.service;
 
 import java.util.List;
 
-import com.gusfot.model.User;
+import com.gusfot.pray.model.User;
 
 public interface UserService {
 

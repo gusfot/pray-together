@@ -1,6 +1,6 @@
-package com.gusfot.helper;
+package com.gusfot.pray.helper;
 
-import com.gusfot.model.Pray;
+import com.gusfot.pray.model.Pray;
 
 public class FacebookSharer implements Sharer {
 

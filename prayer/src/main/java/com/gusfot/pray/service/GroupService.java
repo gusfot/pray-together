@@ -1,10 +1,10 @@
-package com.gusfot.service;
+package com.gusfot.pray.service;
 
 import java.util.List;
 
-import com.gusfot.model.Group;
-import com.gusfot.model.Pray;
-import com.gusfot.model.User;
+import com.gusfot.pray.model.Group;
+import com.gusfot.pray.model.Pray;
+import com.gusfot.pray.model.User;
 
 public interface GroupService {
 

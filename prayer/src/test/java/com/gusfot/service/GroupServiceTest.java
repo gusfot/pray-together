@@ -8,9 +8,10 @@ import java.util.List;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import com.gusfot.model.Group;
-import com.gusfot.model.Pray;
-import com.gusfot.model.User;
+import com.gusfot.pray.model.Group;
+import com.gusfot.pray.model.Pray;
+import com.gusfot.pray.model.User;
+import com.gusfot.pray.service.GroupService;
 
 public class GroupServiceTest {
 

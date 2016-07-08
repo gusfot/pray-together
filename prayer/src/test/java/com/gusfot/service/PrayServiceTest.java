@@ -7,7 +7,8 @@ import java.util.List;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import com.gusfot.model.Pray;
+import com.gusfot.pray.model.Pray;
+import com.gusfot.pray.service.PrayService;
 
 public class PrayServiceTest {
 
