@@ -3,257 +3,37 @@
 <generatorConfiguration >
 <classPathEntry location="C:\Users\gusfot\.m2\repository\mysql\mysql-connector-java\5.1.32\mysql-connector-java-5.1.32.jar" />
   <context id="context1" >
-    <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://120.100.80.208:3306/mokjang" userId="mokjang" password="!inpion00" />
-    <javaModelGenerator targetPackage="kr.ch.oe.model" targetProject="oe-mokjang" />
-    <sqlMapGenerator targetPackage="kr.ch.oe.dao.mapper" targetProject="oe-mokjang" />
-    <javaClientGenerator targetPackage="kr.ch.oe.dao" targetProject="oe-mokjang" type="XMLMAPPER" />
+    <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://localhost:3306/pray" userId="ohjicweb" password="dhwlrrhkfh1!" />
+    <javaModelGenerator targetPackage="com.gusfot.model" targetProject="pray" />
+    <sqlMapGenerator targetPackage="com.gusfot.dao.mapper" targetProject="pray" />
+    <javaClientGenerator targetPackage="com.gusfot.dao" targetProject="pray" type="XMLMAPPER" />
     
-    <table schema="mokjang" tableName="attend" >
-      <columnOverride column="attend_seq" property="attendSeq" />
-      <columnOverride column="dept_seq" property="deptSeq" />
-      <columnOverride column="user_id" property="userId" />
-      <columnOverride column="weeks" property="weeks" />
-      <columnOverride column="mokjang_attend_seq" property="mokjangAttendSeq" />
-      <columnOverride column="point" property="point" />
-      <columnOverride column="reg_id" property="regId" />
-      <columnOverride column="reg_time" property="regTime" />
-	</table>
-	
-	<table schema="mokjang" tableName="mokjang_attend" >
-      <columnOverride column="mokjang_attend_seq" property="mokjangAttendSeq" />
-      <columnOverride column="dept_seq" property="deptSeq" />
-      <columnOverride column="weeks" property="weeks" />
-      <columnOverride column="point" property="point" />
-      <columnOverride column="reg_id" property="regId" />
-      <columnOverride column="reg_time" property="regTime" />
-    </table>
-	
-	<table schema="mokjang" tableName="attend_item_hist" >
-      <columnOverride column="attend_item_hist_seq" property="attendItemHistSeq" />
-      <columnOverride column="item_code" property="itemCode" />
-      <columnOverride column="item_value" property="itemValue" />
-      <columnOverride column="attend_seq" property="attendSeq" />
-      <columnOverride column="reg_time" property="regTime" />
-    </table>
-    <table schema="mokjang" tableName="attend_item_mngr" >
-      <columnOverride column="attend_item_mngr_seq" property="attendItemMngrSeq" />
-      <columnOverride column="mngr_name" property="mngrName" />
-      <columnOverride column="start_date" property="startDate" />
-      <columnOverride column="end_date" property="endDate" />
-      <columnOverride column="desc" property="desc" />
-      <columnOverride column="use_yn" property="useYn" />
-      <columnOverride column="reg_id" property="regId" />
-      <columnOverride column="reg_time" property="regTime" />
-    </table>
-    
-    <table schema="mokjang" tableName="attend_item" >
-      <columnOverride column="attend_item_seq" property="attendItemSeq" />
-      <columnOverride column="item_name" property="itemName" />
-      <columnOverride column="code" property="code" />
-      <columnOverride column="weight" property="weight" />
-      <columnOverride column="item_desc" property="itemDesc" />
-      <columnOverride column="item_type" property="itemType" />
-      <columnOverride column="item_type_desc" property="itemTypeDesc" />
-      <columnOverride column="priority" property="priority" />
-      <columnOverride column="use_yn" property="useYn" />
-      <columnOverride column="attend_item_mngr_seq" property="attendItemMngrSeq" />
-      <columnOverride column="reg_id" property="regId" />
-      <columnOverride column="reg_time" property="regTime" />
-    </table>
-
-    <!-- 
-	<table schema="mokjang" tableName="attend_worship" >
-      <columnOverride column="attend_worship_seq" property="attendWorshipSeq" />
-      <columnOverride column="weeks" property="weeks" />
-      <columnOverride column="worship_seq" property="worshipSeq" />
-      <columnOverride column="worship_times" property="worshipTimes" />
-      <columnOverride column="worship_date" property="worshipDate" />
-      <columnOverride column="user_id" property="userId" />
-      <columnOverride column="reg_id" property="regId" />
-      <columnOverride column="reg_time" property="regTime" />
-	</table>
-    <table schema="mokjang" tableName="worship" >
-      <columnOverride column="worship_seq" property="worshipSeq" />
-      <columnOverride column="worship_name" property="worshipName" />
-      <columnOverride column="worship_day" property="worshipDay" />
-      <columnOverride column="reg_id" property="regId" />
-      <columnOverride column="reg_time" property="regTime" />
-	</table>
-    <table schema="mokjang" tableName="edu" >
-      <columnOverride column="edu_seq" property="eduSeq" />
-      <columnOverride column="edu_name" property="eduName" />
-      <columnOverride column="total_unit" property="totalUnit" />
-      <columnOverride column="reg_id" property="regId" />
-      <columnOverride column="reg_time" property="regTime" />
-    </table>
-    
-	<table schema="mokjang" tableName="worship" >
-      <columnOverride column="worship_seq" property="worshipSeq" />
-      <columnOverride column="worship_name" property="worshipName" />
-      <columnOverride column="worship_day" property="worshipDay" />
-      <columnOverride column="reg_id" property="regId" />
-      <columnOverride column="reg_time" property="regTime" />
-	</table>
-	<table schema="mokjang" tableName="role_change_hist" >
-      <columnOverride column="role_change_hist_seq" property="roleChangeHistSeq" />
-      <columnOverride column="user_id" property="userId" />
-      <columnOverride column="before_role_seq" property="beforeRoleSeq" />
-      <columnOverride column="after_role_seq" property="afterRoleSeq" />
-      <columnOverride column="change_date" property="changeDate" />
-      <columnOverride column="change_resn" property="changeResn" />
-      <columnOverride column="reg_id" property="regId" />
-      <columnOverride column="reg_time" property="regTime" />
-	</table>
-    <table schema="mokjang" tableName="department_change_hist" >
-      <columnOverride column="department_change_hist_seq" property="departmentChangeHistSeq" />
-      <columnOverride column="user_id" property="userId" />
-      <columnOverride column="before_department_seq" property="beforeDepartmentSeq" />
-      <columnOverride column="after_department_seq" property="afterDepartmentSeq" />
-      <columnOverride column="change_date" property="changeDate" />
-      <columnOverride column="change_resn" property="changeResn" />
-      <columnOverride column="reg_id" property="regId" />
-      <columnOverride column="reg_time" property="regTime" />
-	</table>
-	
-    <table schema="mokjang" tableName="report" >
-      <columnOverride column="report_seq" property="reportSeq" />
-      <columnOverride column="dept_seq" property="deptSeq" />
-      <columnOverride column="user_id" property="userId" />
-      <columnOverride column="weeks" property="weeks" />
-      <columnOverride column="visit_content" property="visitContent" />
-      <columnOverride column="mokjang_report_seq" property="mokjangReportSeq" />
-      <columnOverride column="point" property="point" />
-      <columnOverride column="reg_id" property="regId" />
-      <columnOverride column="reg_time" property="regTime" />
-	</table>
-    
-    
-    <table schema="mokjang" tableName="mokjang_report" >
-      <columnOverride column="mokjang_report_seq" property="mokjangReportSeq" />
-      <columnOverride column="dept_seq" property="deptSeq" />
-      <columnOverride column="weeks" property="weeks" />
-      <columnOverride column="worship_dt" property="worshipDt" />
-      <columnOverride column="worship_place" property="worshipPlace" />
-      <columnOverride column="next_worship_place" property="nextWorshipPlace" />
-      <columnOverride column="welcome_user_name" property="welcomeUserName" />
-      <columnOverride column="worship_user_name" property="worshipUserName" />
-      <columnOverride column="word_user_name" property="wordUserName" />
-      <columnOverride column="work_user_name" property="workUserName" />
-      <columnOverride column="etc_report_content" property="etcReportContent" />
-      <columnOverride column="offering" property="offering" />
-      <columnOverride column="point" property="point" />
-      <columnOverride column="reg_id" property="regId" />
-      <columnOverride column="reg_time" property="regTime" />
-    </table>
-    
-    <table schema="mokjang" tableName="report_item_hist" >
-      <columnOverride column="report_item_hist_seq" property="reportItemHistSeq" />
-      <columnOverride column="item_code" property="itemCode" />
-      <columnOverride column="item_value" property="itemValue" />
-      <columnOverride column="report_seq" property="reportSeq" />
-      <columnOverride column="reg_time" property="regTime" />
-    </table>
-    <table schema="mokjang" tableName="report_item_mngr" >
-      <columnOverride column="report_item_mngr_seq" property="reportItemMngrSeq" />
-      <columnOverride column="mngr_name" property="mngrName" />
-      <columnOverride column="start_date" property="startDate" />
-      <columnOverride column="end_date" property="endDate" />
-      <columnOverride column="desc" property="desc" />
-      <columnOverride column="use_yn" property="useYn" />
-      <columnOverride column="reg_id" property="regId" />
-      <columnOverride column="reg_time" property="regTime" />
-    </table>
-    
-    <table schema="mokjang" tableName="report_item" >
-      <columnOverride column="report_item_seq" property="reportItemSeq" />
-      <columnOverride column="item_name" property="itemName" />
-      <columnOverride column="code" property="code" />
-      <columnOverride column="weight" property="weight" />
-      <columnOverride column="item_desc" property="itemDesc" />
-      <columnOverride column="item_type" property="itemType" />
-      <columnOverride column="item_type_desc" property="itemTypeDesc" />
-      <columnOverride column="priority" property="priority" />
-      <columnOverride column="use_yn" property="useYn" />
-      <columnOverride column="report_item_mngr_seq" property="reportItemMngrSeq" />
-      <columnOverride column="reg_id" property="regId" />
-      <columnOverride column="reg_time" property="regTime" />
-    </table>
-    
-    <table schema="mokjang" tableName="department" >
-      <columnOverride column="dept_seq" property="deptSeq" />
-      <columnOverride column="dept_type" property="deptType" />
-      <columnOverride column="dept_name" property="deptName" />
-      <columnOverride column="desc" property="desc" />
-      <columnOverride column="parent_seq" property="parentSeq" />
-      <columnOverride column="reg_time" property="regTime" />
-    </table>
-    
-    <table schema="mokjang" tableName="edu" >
-      <columnOverride column="edu_seq" property="eduSeq" />
-      <columnOverride column="edu_name" property="eduName" />
-    </table>
-    <table schema="mokjang" tableName="user" >
-      <columnOverride column="user_seq" property="userSeq" />
-      <columnOverride column="user_name" property="userName" />
-      <columnOverride column="user_id" property="userId" />
-      <columnOverride column="password" property="password" />
-      <columnOverride column="reg_dt" property="regDt" />
-      <columnOverride column="addr" property="addr" />
-      <columnOverride column="role_id" property="roleId" />
-      <columnOverride column="cell_phone" property="cellPhone" />
-      <columnOverride column="home_phone" property="homePhone" />
-      <columnOverride column="job" property="job" />
-      <columnOverride column="gender" property="gender" />
-      <columnOverride column="birth" property="birth" />
+    <table schema="pray" tableName="user" >
       <columnOverride column="email" property="email" />
-      <columnOverride column="dept_seq" property="deptSeq" />
+      <columnOverride column="password" property="password" />
+      <columnOverride column="name" property="name" />
+      <columnOverride column="phone" property="phone" />
       <columnOverride column="reg_time" property="regTime" />
-    </table>
-    <table schema="mokjang" tableName="study" >
-      <columnOverride column="study_seq" property="studySeq" />
-      <columnOverride column="user_id" property="userId" />
-      <columnOverride column="edu_seq" property="eduSeq" />
-      <columnOverride column="status" property="status" />
-      <columnOverride column="reg_time" property="regTime" />
-    </table>
-    <table schema="mokjang" tableName="department" >
-      <columnOverride column="dept_seq" property="deptSeq" />
-      <columnOverride column="dept_name" property="deptName" />
-      <columnOverride column="parent_seq" property="parentSeq" />
-      <columnOverride column="reg_time" property="regTime" />
-    </table>
-     
-     <table schema="mokjang" tableName="mission_work_status" >
-      <columnOverride column="mission_work_status_seq" property="missionWorkStatusSeq" />
-      <columnOverride column="user_id" property="userId" />
-      <columnOverride column="new_user_id" property="newUserId" />
-      <columnOverride column="reg_date" property="regDate" />
-      <columnOverride column="reg_id" property="regId" />
-      <columnOverride column="reg_time" property="regTime" />
-      </table>
-       -->
-       
-       <!-- 
-      <table schema="mokjang" tableName="notice" >
-      <columnOverride column="notice_seq" property="noticeSeq" />
+	</table>
+	
+   	<table schema="pray" tableName="pray" >
+      <columnOverride column="pray_id" property="prayId" />
       <columnOverride column="title" property="title" />
       <columnOverride column="content" property="content" />
-      <columnOverride column="openYn" property="openYn" />
-      <columnOverride column="reg_id" property="regId" />
+      <columnOverride column="target_date" property="targetDate" />
+      <columnOverride column="is_achieved" property="isAchieved" />
+      <columnOverride column="achieved_time" property="achievedTime" />
+      <columnOverride column="userId" property="userId" />
       <columnOverride column="reg_time" property="regTime" />
-    </table>
-     
-     
-     <table schema="mokjang" tableName="edu_status" >
-      <columnOverride column="edu_status_seq" property="eduStatusSeq" />
-      <columnOverride column="user_id" property="userId" />
-      <columnOverride column="edu_seq" property="eduSeq" />
-      <columnOverride column="edu_date" property="eduDate" />
-      <columnOverride column="edu_unit" property="eduUnit" />
-      <columnOverride column="state" property="state" />
-      <columnOverride column="reg_id" property="regId" />
+	</table>
+	
+    <table schema="pray" tableName="group" >
+      <columnOverride column="group_id" property="group_id" />
+      <columnOverride column="name" property="name" />
+      <columnOverride column="reg_user_id" property="reg_user_id" />
       <columnOverride column="reg_time" property="regTime" />
-    </table>
-    -->
+	</table>
+	
+
   </context>
 </generatorConfiguration>

@@ -38,7 +38,7 @@
 		<appender-ref ref="STDOUT" />
 	</logger>
 	
-	<logger name="kr.ch.oe" level="TRACE">
+	<logger name="com.gusfot.pray" level="TRACE">
 		<appender-ref ref="FILE" />
 	</logger>
     
